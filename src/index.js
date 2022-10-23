@@ -6,12 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter,
-  BrowserRouter as Router,
+  Routes,
+  Route
 } from "react-router-dom";
+import User from './components/User/User';
+import Admin from './components/Admin/Admin';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />
+    <Routes>
+          <Route path="/" element={<App />}>
+          <Route path="user" element={<User />} />
+          <Route path="admin" element={<Admin />} />
+          </Route>
+      </Routes>
   </BrowserRouter>
   // </React.StrictMode>
 );

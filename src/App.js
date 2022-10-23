@@ -1,18 +1,23 @@
-import logo from './logo.svg';
+import logo from "./logo.svg";
 // import './App.scss';
-import { Button } from 'bootstrap';
-import Header from "./components/Header/Header"
-import {Link} from "react-router-dom"
+import { Button } from "bootstrap";
+import Header from "./components/Header/Header";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-     <Header/>
-     <div>
-      test link
-     </div>
-     <button>Go to user page</button>
-     <button>Go to admin page</button>
+    <div className="app-container">
+        <div className="header-container">
+          <Header />
+        </div>
+
+        <div className="main-container">
+          <div className="sidenav-container"></div>
+          <div className="app-content">
+            <Outlet/>
+          </div>
+        </div>
+     
     </div>
   );
 }
