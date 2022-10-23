@@ -1,14 +1,18 @@
 import logo from './logo.svg';
-import './App.scss';
-import MyComponent from './components/MyComponent';
+// import './App.scss';
 import { Button } from 'bootstrap';
+import Header from "./components/Header/Header"
+import {Link} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      hello
-     <button>h</button>
-
+     <Header/>
+     <div>
+      test link
+     </div>
+     <button>Go to user page</button>
+     <button>Go to admin page</button>
     </div>
   );
 }
