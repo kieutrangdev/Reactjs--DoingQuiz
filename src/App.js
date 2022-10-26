@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
-// import './App.scss';
+
+import './App.scss';
 import { Button } from "bootstrap";
 import Header from "./components/Header/Header";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -10,9 +10,9 @@ function App() {
         <div className="header-container">
           <Header />
         </div>
-
         <div className="main-container">
-          <div className="sidenav-container"></div>
+          <div className="sidenav-container">
+          </div>
           <div className="app-content">
             <Outlet/>
           </div>
